@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>邮掌柜</title>
+</head>
+
+<body>
+  <div id="app">
+    <router-view />
+  </div>
+
+  <div id="statistics">
+    <script src="//i0<%=process.env.DOMAIN %>.ulecdn.com/yzgpad/common/js/yzg-pad.js?v=1.1"></script>
+    <script>
+      (function () {
+        var domain = "<%=process.env.DOMAIN %>";
+        if (!domain) {
+          var script = document.createElement('script');
+          script.src = "https://s19.cnzz.com/z_stat.php?id=1274422785&web_id=1274422785";
+          document.getElementById('statistics').appendChild(script);
+        }
+      })();
+    </script>
+  </div>
+  <!-- 邮乐统计 -->
+  <script src="https://i0.ulecdn.com/ule/common/js/statutil.js?init=true&autostat=true&hashstat=true&teststat=true"></script>
+  <script src="//i1.ulecdn.com/app/yzg/goodsmanage/js/vconsole.min.js?v1" type="text/javascript" charset="utf-8"></script>
+  <script>
+    if (/localhost|.beta.ule|.testing.ule|127.0.0.1|192.168/.test(window.location.hostname)) {
+      window.vConsole = new window.VConsole();
+    }
+  </script>
+</body>
+
+</html>
